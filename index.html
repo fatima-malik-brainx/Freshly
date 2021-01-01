@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d1ccdcc90704a6f1c9928da_favicon-8eba3b3da20eca46b77ba37f3df6ae0adc52a8988e78008fc68e3aa360c7a990.ico" rel="shortcut icon" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.steps@1.1.1/dist/jquery-steps.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery.steps@1.1.1/dist/jquery-steps.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Freshly - Join Now</title>
+</head>
+<body>
+    <div class="container-fluid p-1">
+        <div class="step-app" id="mealSteps">
+            <ul class="step-steps">
+              <li data-step-target="plan-step">Plan</li>
+              <li data-step-target="day-step">Day</li>
+              <li data-step-target="meals-step">Meals</li>
+              <li data-step-target="checkout-step">Checkout</li>
+            </ul>
+
+            <div class="step-content">
+                <!-- Plan Selection Step -->
+                <div class="step-tab-panel" data-step="plan-step">
+                    <div class="text-center mt-5 plans-and-menu-section mb-5 ml-4">
+                        <h2 class="mb-4">PLANS AND MENU</h2>
+            
+                        <img class="plans-and-menu-section-image" src="Images/meal_sleeve.png" height="120px">
+                        <img class="plans-and-menu-section-arrow-image" src="Images/greenarrow.png" height="80px">
+                        <img class="plans-and-menu-section-image" src="Images/tray_meal.png" height="120px">
+                        <img class="plans-and-menu-section-arrow-image" src="Images/greenarrow.png" height="80px">
+                        <img class="plans-and-menu-section-image" src="Images/teriyaki.png" height="120px">
+                        
+                        <p>Each Freshly meal is one serving, for one person, at one sitting - <b>just heat and eat.</b></p>
+                    </div>
+            
+                    <div class="plans-section text-center">
+                        <div div="row ">
+                        
+                            <div class="col-3 d-md-inline-block plans-card d-none ">
+                                <p class="plans-card-title mb-0">4 MEALS</p>
+                                <p class="plans-card-text">per week</p>
+                                <p class="plans-card-text mt-4">$11.49 / MEAL</p>
+                                
+                                <button class="choose-menu-btn btn" id="4">CHOOSE</button>
+                            </div>
+            
+                            <div class="col-3 plans-card d-md-inline-block d-none">
+                                <p class="plans-card-title mb-0">6 MEALS</p>
+                                <p class="plans-card-text">per week</p>
+                                <p class="plans-card-text mt-4">$9.49 / MEAL</p>
+                                
+                                <button class="choose-menu-btn btn" id="6">CHOOSE</button>
+                            </div>
+            
+                            <div class="col-3 plans-card d-md-inline-block d-none">
+                                <p class="plans-card-title mb-0">10 MEALS</p>
+                                <p class="plans-card-text">per week</p>
+                                <p class="plans-card-text mt-4">$8.99 / MEAL</p>
+                                
+                                <button class="choose-menu-btn btn" id="10">CHOOSE</button>
+                            </div>
+            
+                            <div class="col-3 plans-card d-md-inline-block d-none">
+                                <p class="plans-card-title mb-0">12 MEALS</p>
+                                <p class="plans-card-text">per week</p>
+                                <p class="plans-card-text mt-4">$8.49 / MEAL</p>
+                                
+                                <button class="choose-menu-btn btn" id="12">CHOOSE</button>
+                            </div>
+            
+                            <div class="col-12 d-md-none plans-card-small">
+                                <p class="plans-card-text">Meals per week:</p>
+            
+                                <div class="tab text-center ml-5 mr-5">
+                                    <button id="default-open" class="tablinks" onclick="showMeals(event, 'four')">4</button>
+                                    <button class="tablinks" onclick="showMeals(event, 'six')">6</button>
+                                    <button class="tablinks" onclick="showMeals(event, 'ten')">10</button>
+                                    <button class="tablinks" onclick="showMeals(event, 'twelve')">12</button>
+                                </div>
+            
+                                <div id="four" class="tabcontent">
+                                    <p class="plans-card-title mb-0">4 MEALS</p>
+                                    <p class="plans-card-text">per week</p>
+                                    <p class="plans-card-text mt-4">$11.49 / MEAL</p>
+                                    
+                                    <button id="4" class="choose-menu-btn-small btn">SELECT THE 4 MEAL PLAN</button>
+                                </div>
+                                
+                                <div id="six" class="tabcontent">
+                                    <p class="plans-card-title mb-0">6 MEALS</p>
+                                    <p class="plans-card-text">per week</p>
+                                    <p class="plans-card-text mt-4">$9.49 / MEAL</p>
+                                    
+                                    <button id="6" class="choose-menu-btn-small btn">SELECT THE 6 MEAL PLAN</button>
+                                </div>
+                                
+                                <div id="ten" class="tabcontent">
+                                    <p class="plans-card-title mb-0">10 MEALS</p>
+                                    <p class="plans-card-text">per week</p>
+                                    <p class="plans-card-text mt-4">$8.99 / MEAL</p>
+                                    
+                                    <button id="10" class="choose-menu-btn-small btn">SELECT THE 10 MEAL PLAN</button>
+                                </div>
+            
+                                <div id="twelve" class="tabcontent">
+                                    <p class="plans-card-title mb-0">12 MEALS</p>
+                                    <p class="plans-card-text">per week</p>
+                                    <p class="plans-card-text mt-4">$8.49 / MEAL</p>
+                                    
+                                    <button id="12" class="choose-menu-btn-small btn">SELECT THE 12 MEAL PLAN</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day Selection Step -->
+                <div class="step-tab-panel" data-step="day-step">
+                    <div class="text-center mt-5 plans-and-menu-section mb-5 ml-4">
+                        <h6 class="mb-5 MT-4">CHOOSE A DELIVERY DAY</h6>
+                    </div>
+            
+                    <div class="row ">
+                        <div class="col-md-6  days-list mx-auto">
+                            <ul class="list-group" id="listGroup">
+                            </ul>   
+            
+                            <p class="mt-2 text-center">Scroll for more delivery dates</p>
+            
+                            <p class="text-center"><i class="fa fa-chevron-down"></i></p>
+            
+                            <button class="select-day-btn btn">NEXT</button>
+
+                            <p class="text-center mt-2">First Delivery Date: <span id="selected-delivery-date"></span></p>
+                        </div>   
+                    </div> 
+                </div>
+
+                <!-- Meals Selection Step -->
+                <div class="step-tab-panel" data-step="meals-step">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-8 meals-menu p-1 pr-4">
+                             <div class="row mt-4 ml-2">
+                                 
+                                 <div class="col-lg-3 col-md-4 p-1">
+                                     <div class="card">
+                                         <div class="row " id="steak-peppercorn">
+                                             <div class="col-md-12 col-4 d-lg-block d-inline-block">
+                                                 <img class="card-img" src="images/STEAK PEPPERCORN.jpg" alt="Card image">
+                                             </div>
+                                             <div class="card-body-div col-md-12 col-8 p-0 d-lg-block d-inline-block">
+                                                 <div class="card-body m-sm-0">
+                                                    <div class="meal-text">
+                                                        <h6 class="card-title">STEAK PEPPERCORN</h6>
+                                                        <p class="card-text">with Sautéed Carrots & French Green Beans</p>
+                                                    </div>
+                                                    <div class="d-inline-flex"> 
+                                                        <p class="mt-2 border-right mr-2 pr-2 meal-desc">510 cals</p>
+                                                        <p class="mt-2 border-right  pr-2 meal-desc">33 carbs</p>
+                                                        <p class="mt-2 ml-2 d-xl-block d-md-none d-sm-block  border-right pr-2 meal-desc">29g Protein</p>
+                                                        <button class=" btnAdd btn-success">+Add</button>
+                                                    </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>  
+                                 </div>
+             
+                                 <div class="col-lg-3 col-md-4 p-1">
+                                     <div class="card">
+                                         <div class="row " id="BOLOGNESE">
+                                             <div class="col-md-12 col-4 d-lg-block d-inline-block">
+                                                 <img class="card-img" src="images/CAULIFLOWER SHELL BEEF BOLOGNESE1.jpg" alt="Card image">
+                                             </div>
+                                             <div class="card-body-div col-md-12 col-8 p-0 d-lg-block d-inline-block">
+                                                 <div class="card-body m-sm-0 ">
+                                                    <div class="meal-text">
+                                                     <h6 class="card-title">CAULIFLOWER BEEF BOLOGNESE</h6>
+                                                     <p class="card-text">with Nonna’s Soffritto & Italian Cheeses</p>
+                                                    </div>
+                                                     <div class="d-inline-flex">
+                                                         <p class="mt-2 border-right mr-2 pr-2 meal-desc">540 cals</p>
+                                                         <p class="mt-2 border-right  pr-2 meal-desc">48 carbs</p>
+                                                         <p class="mt-2 ml-2 d-xl-block d-md-none d-sm-block  border-right pr-2 meal-desc">29g Protein</p>
+                                                         <button class=" btnAdd btn-success">+Add</button>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>  
+                                 </div>
+             
+                                 <div class="col-lg-3 col-md-4 p-1">
+                                     <div class="card">
+                                         <div class="row "id="chicken-parm">
+                                             <div class="col-md-12 col-4 d-lg-block d-inline-block">
+                                                 <img class="card-img" src="images/PROTEIN-PACKED CHICKEN PARM.jpg" alt="Card image">
+                                             </div>
+                                             <div class="card-body-div col-md-12 col-8 p-0 d-lg-block d-inline-block">
+                                                 <div class="card-body m-sm-0">
+                                                    <div class="meal-text">
+                                                     <h6 class="card-title">PROTEIN-PACKED CHICKEN PARM</h6>
+                                                     <p class="card-text">with Mozzarella & Garlicky Broccoli</p>
+                                                    </div>
+                                                     <div class="d-inline-flex">
+                                                         <p class="mt-2 border-right mr-2 pr-2 meal-desc">510 cals</p>
+                                                         <p class="mt-2 border-right  pr-2 meal-desc">33 carbs</p>
+                                                         <p class="mt-2 ml-2 d-xl-block d-md-none d-sm-block  border-right pr-2 meal-desc">29g Protein</p>
+                                                         <button class=" btnAdd btn-success">+Add</button>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>  
+                                 </div>
+             
+                                 <div class="col-lg-3 col-md-4 p-1">
+                                     <div class="card">
+                                         <div class="row "id="homestyle-chicken">
+                                             <div class="col-md-12 col-4 d-lg-block d-inline-block">
+                                                 <img class="card-img" src="images/HOMESTYLE CHICKEN.jpg" alt="Card image">
+                                             </div>
+                                             <div class="card-body-div col-md-12 col-8 p-0 d-lg-block d-inline-block">
+                                                 <div class="card-body m-sm-0">
+                                                    <div class="meal-text">
+                                                     <h6 class="card-title">HOMESTYLE CHICKEN</h6>
+                                                     <p class="card-text">with Sautéed Carrots & French Green Beans</p>
+                                                    </div>
+                                                     <div class="d-inline-flex">
+                                                         <p class="mt-2 border-right mr-2 pr-2 meal-desc">510 cals</p>
+                                                         <p class="mt-2 border-right  pr-2 meal-desc">33 carbs</p>
+                                                         <p class="mt-2 ml-2 d-xl-block d-md-none d-sm-block  border-right pr-2 meal-desc">29g Protein</p>
+                                                         <button class=" btnAdd btn-success">+Add</button>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>  
+                                 </div>
+             
+                                 <div class="col-lg-3 col-md-4 p-1">
+                                     <div class="card">
+                                         <div class="row" id="steak-peppercorn">
+                                             <div class="col-md-12 col-4 d-lg-block d-inline-block">
+                                                 <img class="card-img" src="images/STEAK PEPPERCORN.jpg" alt="Card image">
+                                             </div>
+                                             <div class="card-body-div col-md-12 col-8 p-0 d-lg-block d-inline-block">
+                                                 <div class="card-body m-sm-0 ">
+                                                     <h6 class="card-title">STEAK PEPPERCORN</h6>
+                                                     <p class="card-text">with Sautéed Carrots & French Green Beans</p>
+                                                     <div class="d-inline-flex">
+                                                         <p class="mt-2 border-right mr-2 pr-2 meal-desc">510 cals</p>
+                                                         <p class="mt-2 border-right  pr-2 meal-desc">33 carbs</p>
+                                                         <p class="mt-2 ml-2 d-xl-block d-md-none d-sm-block  border-right pr-2 meal-desc">29g Protein</p>
+                                                         <button class=" btnAdd btn-success">+Add</button>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>  
+                                 </div>
+             
+                                 <div class="col-lg-3 col-md-4 p-1">
+                                     <div class="card">
+                                         <div class="row" id="steak-peppercorn">
+                                             <div class="col-md-12 col-4 d-lg-block d-inline-block">
+                                                 <img class="card-img" src="images/STEAK PEPPERCORN.jpg" alt="Card image">
+                                             </div>
+                                             <div class="card-body-div col-md-12 col-8 p-0 d-lg-block d-inline-block">
+                                                 <div class="card-body m-sm-0 ">
+                                                     <h6 class="card-title">STEAK PEPPERCORN</h6>
+                                                     <p class="card-text">with Sautéed Carrots & French Green Beans</p>
+                                                     <div class="d-inline-flex">
+                                                         <p class="mt-2 border-right mr-2 pr-2 meal-desc">510 cals</p>
+                                                         <p class="mt-2 border-right  pr-2 meal-desc">33 carbs</p>
+                                                         <p class="mt-2 ml-2 d-xl-block d-md-none d-sm-block  border-right pr-2 meal-desc">29g Protein</p>
+                                                         <button class=" btnAdd btn-success">+Add</button>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>  
+                                 </div>
+             
+                                 <div class="col-lg-3 col-md-4 p-1">
+                                     <div class="card">
+                                         <div class="row">
+                                             <div class="col-md-12 col-4 d-lg-block d-inline-block">
+                                                 <img class="card-img" src="images/STEAK PEPPERCORN.jpg" alt="Card image">
+                                             </div>
+                                             <div class="card-body-div col-md-12 col-8 p-0 d-lg-block d-inline-block">
+                                                 <div class="card-body m-sm-0 ">
+                                                     <h6 class="card-title">STEAK PEPPERCORN</h6>
+                                                     <p class="card-text">with Sautéed Carrots & French Green Beans</p>
+                                                     <div class="d-inline-flex">
+                                                         <p class="mt-2 border-right mr-2 pr-2 meal-desc">510 cals</p>
+                                                         <p class="mt-2 border-right  pr-2 meal-desc">33 carbs</p>
+                                                         <p class="mt-2 ml-2 d-xl-block d-md-none d-sm-block  border-right pr-2 meal-desc">29g Protein</p>
+                                                         <button class=" btnAdd btn-success">+Add</button>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>  
+                                 </div>
+             
+                                 <div class="col-lg-3 col-md-4 p-1">
+                                     <div class="card">
+                                         <div class="row">
+                                             <div class="col-md-12 col-4 d-lg-block d-inline-block">
+                                                 <img class="card-img" src="images/STEAK PEPPERCORN.jpg" alt="Card image">
+                                             </div>
+                                             <div class="col-md-12 col-8 p-0 d-lg-block d-inline-block">
+                                                 <div class="card-body m-sm-0 ">
+                                                     <h6 class="card-title">STEAK PEPPERCORN</h6>
+                                                     <p class="card-text">with Sautéed Carrots & French Green Beans</p>
+                                                     <div class="d-inline-flex">
+                                                         <p class="mt-2 border-right mr-2 pr-2 meal-desc">510 cals</p>
+                                                         <p class="mt-2 border-right  pr-2 meal-desc">33 carbs</p>
+                                                         <p class="mt-2 ml-2 d-xl-block d-md-none d-sm-block  border-right pr-2 meal-desc">29g Protein</p>
+                                                         <button class=" btnAdd btn-success">+Add</button>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>  
+                                 </div>
+             
+                                 <div class="col-lg-3 col-md-4 p-1">
+                                     <div class="card">
+                                         <div class="row">
+                                             <div class="col-md-12 col-4 d-lg-block d-inline-block">
+                                                 <img class="card-img" src="images/STEAK PEPPERCORN.jpg" alt="Card image">
+                                             </div>
+                                             <div class="col-md-12 col-8 p-0 d-lg-block d-inline-block">
+                                                 <div class="card-body m-sm-0">
+                                                     <h6 class="card-title">STEAK PEPPERCORN</h6>
+                                                     <p class="card-text">with Sautéed Carrots & French Green Beans</p>
+                                                     <div class="d-inline-flex">
+                                                         <p class="mt-2 border-right mr-2 pr-2 meal-desc">510 cals</p>
+                                                         <p class="mt-2 border-right  pr-2 meal-desc">33 carbs</p>
+                                                         <p class="mt-2 ml-2 d-xl-block d-md-none d-sm-block  border-right pr-2 meal-desc">29g Protein</p>
+                                                         <button class=" btnAdd btn-success">+Add</button>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>  
+                                 </div>
+             
+                             </div>
+                        </div>  <!-- meals Menu block -->
+
+                        <div class="col-lg-3 col-md-4 cart-div p-0">
+                            <div class="bg-white pl-2 text-center">
+                                <p class="delivery-for m-0 p-0 text-left">My Delivery For:</p>
+
+                                <b><p id="delivery-date" class="text-left"></p></b>
+                                
+                                <button class="cart-next-btn btn bg-success">NEXT</button>
+
+                                <h6 class="p-3 meals-alert text-center d-inline-flex">
+                                    <i class="fas fa-exclamation text-danger pr-1 exclamation-icon"></i>
+                                    <span class="continue-meals"> 
+                                        Add 
+                                        <span class="selected-meal-qty"></span>
+                                        meals to continue
+                                     </span>
+                                </h6>
+                                
+                                <h6 id="all-set" class="all-set text-center"></h6>
+                                
+                            </div>
+                            <div id="cart">
+                                <p id="getting-started" class="text-center mt-2 ml-1">
+                                    Get started by adding your meals.
+                                </p>
+
+                                <div class="meal-counter">
+                                    <span id="total-selected-meals"></span>
+                                    /
+                                    <span id="total-meals"></span>
+
+                                   <div class="text-right">
+                                        <button class="text-success text-right" id="clear-all">CLEAR ALL</button>
+                                   </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Step -->
+                <div class="step-tab-panel" data-step="checkout-step">
+                    <div class="container">
+                        <div class="row mt-2" >
+                            <div class="col-md-7 col-12">
+                                <h6 class="text-left mb-2">CHECKOUT</h6>
+                                <div id="delivery-address">
+                                     <h6 class="text-left">Delivery Address</h6>
+                                     <form class="form-group">
+                                         <div class="row" >
+                                             <div class="col-sm-6 col-12">
+                                                 <label class="address-label"> First Name:</label>
+                                                 <input type="text" id="fname" name="fname" >
+                                             </div>
+                 
+                                             <div class="col-sm-6 col-12">
+                                                 <label class="address-label"> Last Name:</label>
+                                                 <input type="text" id="lname" name="lname" >
+                                             </div>
+                                         </div>
+                 
+                                         <label class="address-label">Full Name For Delivery Address</label><br>
+                                         <input class=" w-100" type="text" id="fullname" name="fullname" ><br>
+                 
+                                         <label class="address-label">Address Line 1</label><br>
+                                         <input class=" w-100" type="text" id="addLine1" name="addLine1" ><br>
+                 
+                                         <label class="address-label">Address Line 2 (Optional)</label><br>
+                                         <input class=" w-100" type="text" id="addLine2" name="addLine2" ><br>
+                                         
+                                         <div class="row" >
+                                             <div class="col-sm-3 col-12">
+                                                 <label class="address-label">City:</label>
+                                                 <input type="text" id="City" name="city" >
+                                             </div>
+                 
+                                             <div class="col-sm-3 col-6">
+                                                 <label class="address-label"> State:</label>
+                                                 <input type="text" id="state" name="state" >
+                                             </div>
+                 
+                                             <div class="col-sm-3 col-6">
+                                                 <label class="address-label"> Zip:</label>
+                                                 <input type="number" id="zip" name="zip" >
+                                             </div>
+                 
+                                         </div>
+                     
+                                         <label class="address-label w-100">Phone Number:</label><br>
+                                         <input type="number" id="phoneNo" name="phoneNo" ><br>
+                                         
+                                         <input type="checkbox" id="msg-updates">
+                                         <label class="address-label w-100" for="msg-updates"> Receive SMS text message updates on my orders</label><br>
+                 
+                                         <label class="address-label w-100">Email (We require your email to send you receipts and order updates)</label><br>
+                                         <input type="email" id="email" name="email" ><br>
+                                         
+                                         <hr>
+                 
+                                         <label class=""><b>Today's Total:</b></label>
+                                         <label class="text-right"><b>$62.93</b></label><br>
+                                         
+                                         
+                                         <input type="Submit" value="Submit"> 
+                                       
+                                     </form>
+                                     
+                                </div>
+                 
+                            </div>
+                            <div class="col-md-5 col-12">
+                                
+                         </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            <div class="step-footer d-none">
+              <button data-step-action="prev" class="step-btn">Previous</button>
+              <button data-step-action="next" id="step-next-btn" class="step-btn">Next</button>
+              <button data-step-action="finish" class="step-btn">Finish</button>
+            </div>
+          </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
