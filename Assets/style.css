@@ -1,0 +1,443 @@
+@font-face {
+  font-family: GoodHeadlineFont;
+  src: url(InriaSans-Regular.ttf);
+}
+.good-headline-font{
+  font-family: GoodHeadlineFont , sans-serif;
+}
+.primary-color{
+  color: #07872b;
+}
+.background-color{
+  background-color: #07872b;
+}
+
+body{
+  font-family: 'Roboto' , sans-serif;
+}
+#cart-img{
+  max-height: 40px;
+}
+#msg-updates{
+  margin-top: 19px;
+}
+.remove-cart-btn{
+  border: transparent;
+}
+.cart-next-btn{
+  padding: 3% 38%;
+  color: white;
+  font-weight: 500;
+}
+.plans-card-title{
+    font-size: 25px;
+}
+.enabled-btn{
+  cursor: pointer;
+}
+.disabled-btn{
+  cursor: no-drop;
+  opacity: .65;
+}
+.card-title{
+    font-size: 15px;
+    line-height: 1.25rem;
+    letter-spacing: 1px;
+    color: #030;
+    font-weight: 600;
+}
+.plans-section{
+  padding: 56px 117px;
+}
+.page-title{
+  font-size: 35px;
+}
+.plans-card{
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  width: 24%;    
+  padding: 40px 20px 11px;
+  cursor: pointer;
+  transition: all 300ms ease;
+  color: #343a40;
+  letter-spacing: 2px;
+}
+.plans-card:hover{
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
+}
+.plans-card-small{
+    padding: 55px 0px 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    margin-bottom: 24px;
+}
+.choose-menu-btn{
+    background-color: #07872b;
+    padding: 5% 30%;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.choose-menu-btn-small{
+    background-color: black;
+    color: white;
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+}
+.choose-menu-btn-small{
+    background-color: #07872b;
+    color: white;
+    font-size: 11px;
+    padding: 10px 50px;
+    width:80%;
+    font-weight: 450;
+}
+.tab button {
+  background-color: inherit;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 22%;
+  padding: 10px 0px;
+  transition: 0.3s;
+  font-size: 17px;
+  margin: 0;
+
+}
+.tab button:hover {
+  background-color:#07872b;
+  color: white;
+  border: none;
+}
+.tab button.active {
+  background-color: #07872b;
+  color: white;
+  border: none;
+
+}
+.accordion-title{
+  color: #030;
+}
+.accordion-title:hover{
+  color: #07872b!important;
+}
+.card-header a:hover{
+  text-decoration: transparent;
+}
+.accordion{
+  padding: 40px 200px;
+}
+.header-list{
+  color:#666!important;
+  font-size: 15px;
+  background-color: white!important;
+  padding-left: 67px;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+.card-header:focus{
+  outline: 1px solid black;
+}
+.card-header{
+  padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    background-color: transparent;
+    border: transparent;
+}
+.list-group-item{
+  border: none;
+  border:1px solid rgba(0,0,0,.125);
+  padding: 12px;
+}
+.list-group-item:hover{
+  transform:translateX(-5px);
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+.list-group{
+  padding-left: inherit;
+  height:240px;
+  overflow-y: scroll;
+  
+  overflow-x: hidden;
+}
+.select-day-btn{
+  background-color: #07872b;
+  color: white;
+  font-size: 12px;
+  padding-top: 1.5% ;
+  padding-bottom: 1.5%;
+  font-weight: 500;
+  font-size: inherit;
+  width: 100%;
+}
+.select-day-btn:hover
+{
+  color: white;
+}
+.card{
+  position: relative;
+}
+.meals-menu{
+  height:calc(100vh - 57px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.card:hover{
+  border:1px solid #07872b;
+}
+.card-text{
+  font-size: 14px;
+  color: #666
+}
+.meal-desc{
+  font-weight: 400;
+  font-family: Roboto;
+  font-size: .75rem;
+  line-height: .875rem;
+  letter-spacing: normal;
+  color: #757575;
+}
+.btnAdd{
+  text-decoration: none;
+  font-weight: 400;
+  font-family: Roboto;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  letter-spacing: normal;
+  color: #fff;
+  min-width: 4.5rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #07872b;
+  height: 2.5rem;
+  border: none;
+  transition: box-shadow .2s,background-color .2s;
+  border-radius: 0;
+  float: right;
+}
+.btnAdd a{
+  text-decoration: none;
+}
+.btnAdd:hover{
+  color: white;
+  background-color: black;
+  border: none;
+}
+.card-img{
+  height: 100%;
+  object-fit: cover;
+}
+.meal-text{
+  min-height: 90px;
+}
+.list-group-item.selected::before {
+  background-color: #07872b;
+}
+.list-group-item.selected{
+  color: #030;
+  background-color: #fafafa;
+}
+.delivery-for{
+  font-size: small;
+}
+.list-group .list-group-item::before {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  z-index: 1;
+  width: 7px;
+  height: 100%;
+  content: "";
+}
+.cart-div{
+  background-color: #ededed;
+  height: calc(100vh - 57px);
+  overflow-x: hidden;
+}
+#cart{
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100vh - 367px);
+}
+.continue-meals{
+  font-size: 14px;
+}
+.step-content{
+  overflow-x: hidden;
+  border: transparent !important;
+
+}
+#clear-all{
+  border: none;
+}
+.tooltip-inner{
+  background-color: white;
+  color: black;
+  display: block;
+}
+.address-label{
+  color: rgba(0,0,0,.5)!important;
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-left: 2px;
+}
+.card-body{
+  color: rgba(0,0,0,.5);
+}
+#delivery-address{
+  border: 1px solid rgba(0,0,0,.125);
+  padding: 35px;
+}
+.fullname{
+  cursor: no-drop;
+  background-color: #e9ecef;
+  opacity: 1;
+
+}
+#submit{
+    color: #fff;
+    background-color: #07872b;
+    border-color: #07872b;
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+.promo-code-btn{
+  background-color: white;
+  border: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.change-zip{
+  text-decoration: underline;
+}
+.apply-btn{
+  border-color: #07872b;
+  font-size: 1rem;
+  border: 1px solid #07872b;
+  padding: 3px 45px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.promo-code-txt{
+  border: 1px solid #07872b;
+  padding: 3px ;
+}
+.payment-section{
+  border: 1px solid rgba(0,0,0,.125);
+  padding: 5px;
+  margin: 5px 14px !important;
+}
+
+.my-meals{
+  border: 1px solid rgba(0,0,0,.125);
+  padding: 5px;
+  margin: 0px 14px !important;
+}
+.selected-meal-img{
+  height: 65px;
+}
+#available-delivery-dates{
+  border-radius: 2px;
+  border: 1px solid #666;
+  padding: .375rem .75rem;
+}
+.form-txt-control {
+  border: 1px solid #666;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #030;
+  background-clip: padding-box;
+  border-radius: 0;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.checkout-title{
+  font-weight: 600;
+  font-size: 18px;
+  padding-left: 14px;
+}
+.form-txt-control:focus{
+  outline: #666;
+  box-shadow: 0 0 0 0.2rem rgba(7,135,43,.25);
+}
+#cart-title{
+  font-size: 12px;
+}
+#site-icon{
+  height:28px;
+}
+.nav-bar{
+  list-style-type:none;
+}
+.step-content{
+  margin-left: 10px;
+
+}
+@media only screen and (max-width: 576px)
+{
+    .plans-and-menu-section-image {
+        height: 70px;
+    }
+    .plans-and-menu-section-arrow-image{
+        height: 50px;
+    }
+    .choose-menu-btn-small{
+        font-size: 10px;
+    }
+    .card-body{
+      padding: 10px 28px 0px 0px;
+    } 
+    .days-list{
+      max-width: 100%;
+       min-width: 50%;
+    }  
+    .plans-section{
+      padding: 50px 10px;
+    } 
+}
+
+@media  only screen and  (min-width: 768px){
+  .col-md-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 32%;
+  }
+  .plans-section{
+    padding: 50px 10px;
+  }
+
+}
+
+@media screen and (min-width: 1280px){
+  .plans-and-menu-section {
+    padding-top: 114px;
+  }
+  .plans-section {
+    padding: 56px 117px;
+  }
+}
