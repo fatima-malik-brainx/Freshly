@@ -45,6 +45,7 @@ body{
     letter-spacing: 1px;
     color: #030;
     font-weight: 600;
+    margin-bottom: 0px;
 }
 .plans-section{
   padding: 56px 117px;
@@ -130,9 +131,7 @@ body{
 .card-header a:hover{
   text-decoration: transparent;
 }
-.accordion{
-  padding: 40px 200px;
-}
+
 .header-list{
   color:#666!important;
   font-size: 15px;
@@ -419,6 +418,7 @@ body{
     .plans-section{
       padding: 50px 10px;
     } 
+    
 }
 
 @media  only screen and  (min-width: 768px){
@@ -439,5 +439,10 @@ body{
   }
   .plans-section {
     padding: 56px 117px;
+  }
+}
+@media screen and (min-width: 998px){
+  .accordion {
+    padding: 40px 200px;
   }
 }
